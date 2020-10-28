@@ -1,0 +1,13 @@
+{
+    "name": "x-xsrf-insomna-plugin",
+    "version": "1.0.0",
+    "main": "plugin.js",
+    "insomnia": {
+        "name": "x-xsrf-token",
+        "description": "X-XSRF Token"
+    },
+    "dependencies": {
+        "insomnia-cookies": "^2.2.24",
+        "lodash": "^4.17.4"
+    }
+}
