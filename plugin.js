@@ -13,6 +13,10 @@ module.exports.templateTags = [{
           }
     ],
     async run (context, url) {
+        if ('' === url) {
+          url = context.context.base_url;
+        }
+
         const key = 'XSRF-TOKEN';
         const { meta } = context;
         const workspace = await context.util.models.workspace.getById(meta.workspaceId);
