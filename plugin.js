@@ -10,13 +10,10 @@ module.exports.templateTags = [{
             type: 'string',
             displayName: 'API Url',
             description: 'fully qualified URL (e.g. https://domain.tld/path)',
-          },
-          {
-            type: 'string',
-            displayName: 'Cookie Key',
-          },
+          }
     ],
-    async run (context, url, key) {
+    async run (context, url) {
+        const key = 'XSRF-TOKEN';
         const { meta } = context;
         const workspace = await context.util.models.workspace.getById(meta.workspaceId);
 
